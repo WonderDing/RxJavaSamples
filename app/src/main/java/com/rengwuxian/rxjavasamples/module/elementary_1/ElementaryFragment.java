@@ -15,14 +15,14 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.rengwuxian.rxjavasamples.BaseFragment;
-import com.rengwuxian.rxjavasamples.network.Network;
 import com.rengwuxian.rxjavasamples.R;
 import com.rengwuxian.rxjavasamples.adapter.ZhuangbiListAdapter;
 import com.rengwuxian.rxjavasamples.model.ZhuangbiImage;
+import com.rengwuxian.rxjavasamples.network.Network;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnCheckedChanged;
 import rx.Observer;
@@ -30,8 +30,8 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class ElementaryFragment extends BaseFragment {
-    @Bind(R.id.swipeRefreshLayout) SwipeRefreshLayout swipeRefreshLayout;
-    @Bind(R.id.gridRv) RecyclerView gridRv;
+    @BindView(R.id.swipeRefreshLayout) SwipeRefreshLayout swipeRefreshLayout;
+    @BindView(R.id.gridRv) RecyclerView gridRv;
 
     ZhuangbiListAdapter adapter = new ZhuangbiListAdapter();
     Observer<List<ZhuangbiImage>> observer = new Observer<List<ZhuangbiImage>>() {
